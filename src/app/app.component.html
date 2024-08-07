@@ -9,7 +9,7 @@
       <h4>{{ todo.content }}</h4>
       <p>Created {{ todo.createdAt | date:'MM/dd/yy' }}</p>
       <input (change)="toggleChange(todo)"   type="checkbox" [checked]="todo.done" />
-      <button (click)="todo.done?  false : true">Delete</button>
+      <button type="button" (click)="handleDelete(todo.id)">Delete</button>
     </li>
     }
   </ul> 

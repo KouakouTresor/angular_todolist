@@ -44,6 +44,10 @@ export class AppComponent {
   }
 
   toggleChange(todo: Todo) {
-    return todo.done = !todo.done
+    todo.done = !todo.done;
+  }
+
+  handleDelete(arg0: number) {
+    this._todos =  this.todos.filter((todo) => todo.id != arg0);
   }
 }
